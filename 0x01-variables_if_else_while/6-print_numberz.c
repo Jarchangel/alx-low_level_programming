@@ -1,6 +1,6 @@
 #include <stdio.h>
  /**
-  * main - Prints all single numbers of base 10 satrting from 0
+  * main - Prints the numbers since 0 to 9
   *
   * Retun: Always (Sucess)
   */
