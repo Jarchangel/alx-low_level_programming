@@ -5,27 +5,21 @@
 
 
 /**
-
- * str_concat - concatenates two strings.
-
- * @s1: first string.
-
- * @s2: second string.
-
-
- * Return: pointer of an array of chars
-
-*/
+ * str_concat - Concatenates two strings.
+ * @s1: The string to be concatenated upon.
+ * @s2: The string to be concatenated to s1.
+ * Return: If concatenation fails - NULL.
+ *         Otherwise - a pointer the newly-allocated space in memory
+ *                     containing the concatenated strings.
+ */
 
 char *str_concat(char *s1, char *s2)
 
 {
 
-	char *strout;
+	char *concat_str;
 
-	unsigned int i, j, k, limit;
-
-
+	int index, concat_index = 0, len = 0;
 
 	if (s1 == NULL)
 
@@ -35,50 +29,23 @@ char *str_concat(char *s1, char *s2)
 
 		s2 = "";
 
+	for (index = 0; s1[index] || s2[index]; index++)
 
+		len++;
 
-	for (i = 0; s1[i] != '\0'; i++)
+	concat_str = malloc(sizeof(char) * len);
 
-		;
-
-
-
-	for (j = 0; s2[j] != '\0'; j++)
-
-		;
-
-
-
-	strout = malloc(sizeof(char) * (i + j + 1));
-
-
-
-	if (strout == NULL)
-
-	{
-
-		free(strout);
+	if (concat_str == NULL)
 
 		return (NULL);
 
-	}
+	for (index = 0; s1[index]; index++)
 
+		concat_str[concat_index++] = s1[index];
 
+	for (index = 0; s2[index]; index++)
 
-	for (k = 0; k < i; k++)
+		concat_str[concat_index++] = s2[index];
 
-		strout[k] = s1[k];
-
-
-
-	limit = j;
-
-	for (j = 0; j <= limit; k++, j++)
-
-		strout[k] = s2[j];
-
-
-
-	return (strout);
-
+	return (concat_str);
 }
