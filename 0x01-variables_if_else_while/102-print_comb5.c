@@ -1,11 +1,9 @@
 #include <stdio.h>
-
 /**
  * main - Prints three combination of numbers
  *
  * Return: Always (Sucess)
  */
-
 int main(void)
 {
 	int c, i, k, j;
@@ -27,11 +25,7 @@ int main(void)
 						putchar(' ');
 						putchar(k);
 						putchar(j);
-
 						if (c + i + k + j == 227 && c == 57)
-						{
-							break;
-						}
 						else
 						{
 							putchar(',');
@@ -42,7 +36,6 @@ int main(void)
 			}
 		}
 	}
-
 	putchar('\n');
 	return (0);
 }
