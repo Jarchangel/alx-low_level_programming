@@ -11,8 +11,9 @@
  * @next: points to the next node
  *
  * Description: doubly linked list node structure
- * for ALX project
+ * for Holberton project
  */
+
 typedef struct dlistint_s
 {
 	int n;
